@@ -5,7 +5,8 @@
   "bin": "bin.js",
   "scripts": {
     "run": "tsc && node dist/index.js",
-    "build": "tsc"
+    "build": "tsc",
+    "preinstall": "npm run build"
   },
   "type": "module",
   "keywords": [],
