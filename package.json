@@ -2,8 +2,10 @@
   "name": "mcp-proxy",
   "version": "1.0.0",
   "main": "index.js",
+  "bin": "bin.js",
   "scripts": {
-    "run": "tsc && node dist/index.js"
+    "run": "tsc && node dist/index.js",
+    "build": "tsc"
   },
   "type": "module",
   "keywords": [],
