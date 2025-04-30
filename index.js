@@ -4,6 +4,13 @@ import { StreamableHTTPClientTransport } from "@modelcontextprotocol/sdk/client/
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { headers } from "./auth.js";
 
+if (!process.env.REMOTE_URL && !process.env.IMANDRA_MCP_SERVER) {
+  throw new Error(
+    "Please set the IMANDRA_MCP_SERVER environment variable (or REMOTE_URL)." +
+    "Try using `code_logician` or `reasoners` to get started."
+  );
+}
+
 const url =
   process.env.REMOTE_URL ||
   `https://api.imandra.ai/v1beta1/tools/mcp/${process.env.IMANDRA_MCP_SERVER}`;
