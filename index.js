@@ -1,19 +1,15 @@
 #!/usr/bin/env node
 
-import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
-
 import { StreamableHTTPClientTransport } from "@modelcontextprotocol/sdk/client/streamableHttp.js";
+import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
+import { headers } from "./auth.js";
 
 const url =
-  process.env["REMOTE_URL"] ||
-  `https://api.imandra.ai/v1beta1/tools/mcp/${
-    process.env["IMANDRA_MCP_SERVER"] || "reasoners"
-  }/`;
+  process.env.REMOTE_URL ||
+  `https://api.imandra.ai/v1beta1/tools/mcp/${process.env.IMANDRA_MCP_SERVER}`;
 
 const remote = new StreamableHTTPClientTransport(new URL(url), {
-  requestInit: {
-    headers: { Authorization: `Bearer ${process.env["IMANDRA_API_KEY"]}` },
-  },
+  requestInit: { headers },
 });
 
 let remoteClosed = false;
