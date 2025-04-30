@@ -6,7 +6,7 @@ import { headers } from "./auth.js";
 
 if (!process.env.REMOTE_URL && !process.env.IMANDRA_MCP_SERVER) {
   throw new Error(
-    "Please set the IMANDRA_MCP_SERVER environment variable (or REMOTE_URL)." +
+    "Please set the IMANDRA_MCP_SERVER environment variable (or REMOTE_URL). " +
     "Try using `code_logician` or `reasoners` to get started."
   );
 }

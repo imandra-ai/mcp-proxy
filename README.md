@@ -9,7 +9,7 @@ This is currently specialised to the Imandra Universe MCP servers (with first-cl
 Recommended usage is via `npx`, which is included with `npm`. Similar functionality is available in other JavaScript toolchains (e.g. `bunx`, `yarn dlx`).
 
 ```bash
-npx -y git@github.com:imandra-ai/mcp-proxy
+npx -y github:imandra-ai/mcp-proxy
 ```
 
 ### Configuration
