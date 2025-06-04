@@ -17,7 +17,7 @@ npx -y github:imandra-ai/mcp-proxy
 Configuration is possible via environment variables, typically specified in an `env` field in your MCP server configuration file.
 
 - `IMANDRA_API_KEY` - your Imandra API key, available from [Imandra Universe](https://universe.imandra.ai/user/api-keys).
-- `IMANDRA_MCP_SERVER` - name/ID of the Imandra Universe MCP server to use (e.g. `reasoners`).
+- `IMANDRA_MCP_SERVER` - name/ID of the Imandra Universe MCP server to use (e.g. `reasoner_gateway`). Find available MCP servers in the [Imandra Universe gallery](https://universe.imandra.ai/gallery?tag=MCP%20server).
 - `REMOTE_URL` - the URL of your remote MCP server (e.g. for a dev or local deployment). If not specified, defaults to `https://api.imandra.ai/v1beta1/tools/mcp/${IMANDRA_MCP_SERVER}`.
 
 ### Example Cursor/Windsurf configuration
@@ -29,7 +29,7 @@ Configuration is possible via environment variables, typically specified in an `
       "command": "npx",
       "env": {
         "IMANDRA_API_KEY": "my_api_key",
-        "IMANDRA_MCP_SERVER": "reasoners"
+        "IMANDRA_MCP_SERVER": "reasoner_gateway"
       },
       "args": [
         "-y",
